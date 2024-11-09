@@ -1,150 +1,280 @@
-<!DOCTYPE html>
-<html lang="es-MX">
+<!Doctype html>
+ <html data-theme="night">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Jony Reyes</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="Logo Jony Reyes.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jony Reyes - Web Designer</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="estilos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.creative-tim.com/twcomponents/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.creative-tim.com/twcomponents/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.creative-tim.com/twcomponents/favicon-16x16.png">
+    <link rel="manifest" href="https://www.creative-tim.com/twcomponents/site.webmanifest">
+    <link rel="mask-icon" href="https://www.creative-tim.com/twcomponents/safari-pinned-tab.svg" color="#0ed3cf">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
 
-<body>
-    <div class="container">
-        <header>
-            <a class="logo" href="#home">
-                <img src="Logo Jony Reyes.png" alt="logo JR" />
+<body style="font-family: 'Barlow', sans-serif; overflow-x: hidden;">
+    <nav class=" border-gray-200 bg-gray-100 dark:bg-gray-700 dark:border-gray-900 ">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
+            <a href="# " class="flex items-center space-x-3 rtl:space-x-reverse ">
+                <img src="Logo Jony Reyes.png " class="h-8 " alt="JonyLogo " />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Jony Reyes | Frontend Developer </span>
             </a>
-            <nav>
-                <ul class="nav-bar">
-                    <li><a class="nav-link active" href="#home"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                    <li><a class="nav-link" href="#projects"><i class="fa fa-briefcase" aria-hidden="true"></i> Proyectos</a></li>
-                    <li><a class="nav-link" href="#certifications"><i class="fa fa-certificate" aria-hidden="true"></i> Certificaciones</a></li>
-                    <li><a class="nav-link" href="#contact"><i class="fa fa-envelope" aria-hidden="true"></i> Contacto</a></li>
+            <button data-collapse-toggle="navbar-solid-bg " type="button " class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-200
+        dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 " aria-controls="navbar-solid-bg " aria-expanded="false ">
+          <span class="sr-only ">Open main menu</span>
+          <svg class="w-5 h-5 " aria-hidden="true " xmlns="http://www.w3.org/2000/svg " fill="none " viewBox="0 0 17 14 ">
+              <path stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M1 1h15M1 7h15M1 13h15 "/>
+          </svg>
+      </button>
+            <div class="hidden w-full md:block md:w-auto " id="navbar-solid-bg ">
+                <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-600 md:dark:bg-transparent dark:border-gray-900 ">
+                    <li>
+                        <a href="#hero " class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent " aria-current="page ">Home</a>
+                    </li>
+                    <li>
+                        <a href="#proyectos" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white
+        md:dark:hover:bg-transparent ">Sobre Mi</a>
+                    </li>
+                    <li>
+                        <a href="# " class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white
+        md:dark:hover:bg-transparent ">Mis proyectos</a>
+                    </li>
+                    <li>
+                        <a href="#skills" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white
+        md:dark:hover:bg-transparent ">Skills </a>
+                    </li
+                    <li>
+                        <a href="#contacto " class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white
+        md:dark:hover:bg-transparent ">Contacto</a>
+                    </li>
                 </ul>
-            </nav>
-        </header>
+            </div>
+        </div>
+    </nav>
+<main>
+ <section class="hero h-screen parallax" style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
+        <div class="hero-overlay bg-opacity-50">
+            <div class="hero-content text-center">
+                <h1 class="text-7xl font-thin" style="padding-top:250px; color: white; text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;"> ¡Hola!, <span class="text-primary">Soy:</span></h1>
+            </div>
+         <div class="hero">
+            <h2 class="text-6xl" style="color: white; text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue; padding-top:100px;" id="typewriter"></h2>
+            </div>
+    <div class="social-media flex scroll-pt-10 justify-center space-x-6 mt-4">
+        <a href="https://github.com/JonRe88" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-blue-900 pt-6"><i class="fab fa-github fa-2x text-purple-blue-500"></i></a>
+        <a href="https://www.linkedin.com/in/jony-reyes-developer/" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-blue-900 pt-6"><i class="fab fa-linkedin-in fa-2x"></i></a>
     </div>
-
-    <main>
-        <div id="home">
-            <div class="filter"></div>
-            <section class="intro">
-                
-                <h1 class="flashing-name">Jony Reyes</h1>
-                <div class="typewriter">
-                    <span id="typewriter-text"></span>
+</section>
+<button id="scrollUpBtn" title="Volver arriba">↑</button>
+    
+    <section>
+                <div class="skills-wrapper" id="skills"> 
+                                <h1 class="text-7xl font-thin text-center pt-[150px] text-white" style="text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;">Habilidades y Certificados </h1>
+                                <div class="first-set animate__animated animate__pulse">
+                                    <!-- Imágenes de arriba -->
+                                    <img src="icons8-html-5.svg" alt="htmllogo" loading="lazy" class="icon icon-card"/>
+                                    <img src="icons8-css3.svg" alt="css3 logo" loading="lazy" class="icon icon-card"/>
+                                    <img src="icons8-javascript.svg" alt="javascriplogo" loading="lazy" class="icon icon-card"/>
+                                </div>
+                                <div class="second-set animate__animated animate__pulse">
+                                    <!-- Imágenes de abajo -->
+                                    <img src="icons8-bootstrap.svg" alt="bootstrsmp" loading="lazy" class="icon icon-card"/>
+                                    <img src="icons8-react-native.svg" alt="reactlogo" loading="lazy" class="icon icon-card"/>
+                                </div> 
+                            </div>
+                            <div class="py-16">
+                                <div class="mx-auto px-6 max-w-6xl text-gray-500">
+                                    <div class="relative z-10 grid gap-3 grid-cols-6">
+                                        <!-- Título Insignias -->
+                                        <div class="col-span-full lg:col-span-2 flex relative p-8 bg-transparent border-none dark:bg-gray-900">
+                                            <div class="size-fit m-auto">
+                                                <span class="text-5xl font-thin text-transparent bg-clip-text bg-gradient-to-br from-blue-100 to-pink-300 dark:from-blue-600 dark:to-pink-900" style="text-shadow: 1px 1px 2px red, 0 0 1em blue;">Insignias</span>
+                                            </div>
+                                        </div>
+                            
+                                        <!-- Primera Insignia - AluraGeek -->
+                                        <div class="col-span-full sm:col-span-3 lg:col-span-2 p-8 rounded-xl bg-white/5 border dark:border-gray-800 dark:bg-gray-900">
+                                            <div>
+                                                <img src="Badge-AluraGeek.png" alt="Insignia-AluraGeek" class="rounded-full w-full border mx-auto dark:bg-white/5 dark:border-white/10">
+                                                <div class="mt-6 text-center space-y-2">
+                                                    <h2 class="text-lg dark:text-white text-center pt-[50px] text-white" style="text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;">Insignia-AluraGeek</h2>
+                                                    <p class="text-1xl  dark:text-white bg-clip-text  text-white bg-gradient-to-br from-blue-100 to-pink-300 dark:from-blue-600 dark:to-pink-900" style="text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;">Esta insignia la obtuve al realizar el proyecto de Alura Geek, desarrollando una aplicación para listar, registrar y eliminar productos usando HTML, CSS y JavaScript.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Segunda Insignia - Portafolio -->
+                                        <div class="col-span-full sm:col-span-3 lg:col-span-2 p-8 rounded-xl bg-white/5 border dark:border-gray-800 dark:bg-gray-900">
+                                            <div>
+                                                <img src="151489444.png" alt="Insignia-Encriptador" class="rounded-full w-full border mx-auto dark:bg-white/5 dark:border-white/10">
+                                                <div class="mt-6 text-center space-y-2">
+                                                    <h2 class="text-lg dark:text-white text-center pt-[50px] text-white" style="text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;">Insignia-Encriptador</h2>
+                                                    <p class="text-1xl  dark:text-white bg-clip-text  text-white bg-gradient-to-br from-blue-100 to-pink-300 dark:from-blue-600 dark:to-pink-900" style="text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;">Esta insignia la obtuve al realizar el proyecto de Alura Geek, desarrollando una aplicación para listar, registrar y eliminar productos usando HTML, CSS y JavaScript.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <!-- Tercera Insignia -->
+                                        <div class="col-span-full lg:col-span-3 p-8 rounded-xl bg-white/5 border dark:border-gray-800 dark:bg-gray-900">
+                                            <div class="grid sm:grid-cols-2">
+                                                <div class="overflow-hidden relative mt-6 h-fit py-6 p-6 border rounded-tl-lg dark:bg-white/5 dark:border-white/10">
+                                                    <img src="Badge-Portfólio.png" class="w-full sm:w-[150%]" alt="Insignia Encriptador">
+                                                </div>
+                                                <div class="flex flex-col justify-between space-y-2">
+                                                    <h2 class="text-lg dark:text-white text-center pt-[50px] text-white" style="text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;">Insignia-Portafolio</h2>
+                                                    <p class="text-1xl  dark:text-white bg-clip-text  text-white bg-gradient-to-br from-blue-100 to-pink-300 dark:from-blue-600 dark:to-pink-900" style="text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;">Esta insignia representa el logro de completar el proyecto de Encriptador, con diversas funcionalidades en JavaScript.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Cuarta Insignia (Ejemplo) -->
+                                        <div class="col-span-full lg:col-span-3 p-8 rounded-xl bg-white/5 border dark:border-gray-800 dark:bg-gray-900">
+                                            <div class="grid sm:grid-cols-2">
+                                                <div class="overflow-hidden relative mt-6 h-fit py-6 p-6 border rounded-tl-lg dark:bg-white/5 dark:border-white/10">
+                                                    <img src="Badge-AluraGeek.png" class="w-full sm:w-[150%]" alt="Descripción de la imagen">
+                                                </div>
+                                                <div class="flex flex-col justify-between space-y-2">
+                                                    <h2 class="text-lg dark:text-white text-center pt-[50px] text-white" style="text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;">Insignia-Portafolio</h2>
+                                                    <p class="text-1xl  dark:text-white bg-clip-text  text-white bg-gradient-to-br from-blue-100 to-pink-300 dark:from-blue-600 dark:to-pink-900" style="text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;">Esta insignia representa el logro de completar el proyecto de Encriptador, con diversas funcionalidades en JavaScript.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+    </section> 
+<button id="scrollUpBtn" title="Volver arriba">↑</button>
+<section id="contacto">
+    <div class="container flex flex-col mx-auto bg-white/5">
+        <h1 class="text-7xl font-thin text-center pt-[150px] text-white" style="text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;">Contacto </h1>
+        <div class="w-full draggable">
+            <div class="container flex flex-col items-center gap-16 mx-auto my-32">
+                <div class="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Email Section -->
+                    <div class="flex flex-col items-center gap-3 px-8 py-10 bg-white/5 rounded-3xl shadow-main">
+                        <span>
+                            <i class="fas fa-envelope fa-2x  text-white bg-clip-text bg-gradient-to-br from-blue-100 to-pink-300 dark:from-blue-600 dark:to-pink-100" style="text-shadow: 1px 1px 2px red, 0 0 1em blue;"></i>
+                        </span>
+                        <p class="text-2xl font-extrabold text-blue-300 bg-clip-text bg-gradient-to-br from-blue-100 to-pink-300 dark:from-blue-600 dark:to-pink-100" style="text-shadow: 1px 1px 2px red, 0 0 1em blue;">Email</p>    <p class="text-base leading-7 text-dark-grey-900" style="text-shadow: 1px 1px 2px red, 0 0 1em blue;">Escribe un correo</p>
+                        <p class="text-base leading-7  text-blue-200 bg-clip-text bg-gradient-to-br from-blue-100 to-pink-300 dark:from-blue-600 dark:to-pink-900" style="text-shadow: 1px 1px 2px red, 0 0 1em blue;" href="mailto:hello@loopple.com">jreyesturismo@hotmail.com</a>
+                    </div>
+                    
+                    <!-- Phone Section -->
+                    <div class="flex flex-col items-center gap-3 px-8 py-10 bg-white/5 rounded-3xl shadow-main">
+                        <span>
+                            <i class="fab fa-github fa-2x text-purple-blue-500"></i>
+                        </span>
+                        <p class="text-2xl font-extrabold text-grey-900" style="text-shadow: 1px 1px 2px red, 0 0 1em blue;">Github</p>
+                        <p class="text-base leading-7 text-dark-grey-900" style="text-shadow: 1px 1px 2px red, 0 0 1em blue;">Da Click </p>
+                        <a class="text-lg font-bold text-purple-blue-900" href="https://github.com/JonRe88">Sigueme!</a>
+                    </div>
+                    
+                    <!-- WhatsApp Section -->
+                    <div class="flex flex-col items-center gap-3 px-8 py-10 bg-white/5 rounded-3xl shadow-main">
+                        <span>
+                            <i class="fab fa-whatsapp fa-2x text-green-500"></i>
+                        </span>
+                        <p class="text-2xl font-extrabold text-dark-grey-900" style="text-shadow: 1px 1px 2px red, 0 0 1em blue;">WhatsApp</p>
+                        <p class="text-base leading-7 text-dark-grey-800" style="text-shadow: 1px 1px 2px red, 0 0 1em blue;">Chatea por WhatsApp</p>
+                        <a class="text-lg font-bold text-green-900" href="https://wa.me/5511856139">Chat on WhatsApp</a>
+                    </div>
+                    
+                    <!-- LinkedIn Section -->
+                    <div class="flex flex-col items-center gap-3 px-8 py-10 bg-white/10 rounded-3xl shadow-main">
+                        <span>
+                            <i class="fab fa-linkedin fa-2x text-blue-600"></i>
+                        </span>
+                        <p class="text-2xl font-extrabold text-dark-grey-900" style="text-shadow: 1px 1px 2px red, 0 0 1em blue;">LinkedIn</p>
+                        <p class="text-base leading-7 text-dark-grey-600" style="text-shadow: 1px 1px 2px red, 0 0 1em blue;">Contáctame por LinkedIn</p>
+                        <a class="text-lg font-bold text-blue-600" href="https://www.linkedin.com/in/jony-reyes-developer/">Ver LinkedIn</a>
+                    </div>
                 </div>
-                <div class="social-media">
-                    <a href="https://github.com/JonRe88" target="_blank" rel="noopener" title="GitHub"><i class='fab fa-github'></i></a>
-                    <a href="https://www.linkedin.com/in/jony-reyes-developer/" target="_blank" rel="noopener" title="LinkedIn"><i class='fab fa-linkedin-in'></i></a>
-                </div>
-            </section>
-        </div>
-
-        <div id="projects">
-            <h2>Mis Proyectos.</h2>
-            <hr>
-            <p>Explora nuestra galería única y creativa que muestra nuestra experiencia en dar vida a las ideas</p>
-            <div class="carousel-container">
-                <button class="carousel-button prev" aria-label="Previous Slide">‹</button>
-                <div class="carousel-slide">
-                    <div class="carousel-track">
-                    <!-- Proyecto 1 -->
-                    <div class="card">
-                        <img class="work-img" src="ENCRIPTADOR.png" alt="Encriptador">
-                        <a href="https://encriptador-unicode.vercel.app/" target="_blank">
-                            <div class="work-content">Encriptador. Proyecto realizado para AluraLatam al termino del curso de programacion con JavaScript</div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <img class="work-img" src="PHOTO-2024-04-29-21-03-04.jpg">
-                        <a href="" target="_blank"> <!--Link to project-->
-                            <div class="work-content">Publicidad para Playeras Personalizadas.</div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <img class="work-img" src="PHOTO-2024-04-29-21-05-52.jpg">
-                        <a href="" target="_blank"> <!--Link to project-->
-                            <div class="work-content">Diseño de Termos Sublimados.</div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <img class="work-img" src="PHOTO-2024-05-01-15-14-33.jpg">
-                        <a href="" target="_blank"> <!--Link to project-->
-                            <div class="work-content">Publicidad para Gorras Personalizadas.</div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <img class="work-img" src="LOGO GRIYAC.png">
-                        <a href="" target="_blank"> <!--Link to project-->
-                            <div class="work-content">Logotipo para "Griyac"</div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <img class="work-img" src="PHOTO-2024-05-01-15-14-34 2.jpg">
-                        <a href="" target="_blank"> <!--Link to project-->
-                            <div class="work-content">Diseño de Tazas para Sublimar</div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <img class="work-img" src="PHOTO-2024-05-01-15-40-15.jpg">
-                        <a href="" target="_blank"> <!--Link to project-->
-                            <div class="work-content">Logotipo para "Sublimacion y Centro de Copiado"</div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <img class="work-img" src="LOGO SOLUCONTAS.jpg">
-                        <a href="" target="_blank"> <!--Link to project-->
-                            <div class="work-content">Logotipo para "Solucontas RP"</div>
-                        </a>
-                    </div>
-                </div>
-                <button class="carousel-button next" aria-label="Next Slide">›</button>
             </div>
         </div>
+    </div>
+    
+</section>
 
-        <!-- Certifications -->
-        <div id="certifications">
-            <h2>Certificaciones.</h2>
-            <hr>
-            <p>Aquí están algunas de mis certificaciones obtenidas hasta la fecha:</p>
-            <ul class="cert-list">
-                <li><i class="fa fa-check-circle" aria-hidden="true"></i><a href="https://app.aluracursos.com/degree/certificate/ca97f387-a88d-47b9-ac2e-60a78caf75ec?lang" target="_blank"> Certificación en Desarrollo Web - AluraLatam</a></li>
-                <li><i class="fa fa-check-circle" aria-hidden="true"><a
-                    href="https://app.aluracursos.com/degree/certificate/24e07724-df23-4ae8-8fe4-cd714e3b78ba?lang"
-                    target="_blank">Certificación en JavaScript - AluraLatam</a></i></li>
-        <li><i class="fa fa-check-circle" aria-hidden="true"><a
-                    href="https://www.freecodecamp.org/certification/JonyR/responsive-web-design"
-                    target="_blank"> Responsive Web Design - freecodecamp </a></i></li>
-        <li><i class="fa fa-check-circle" aria-hidden="true"><a
-                    href="https://learn.microsoft.com/es-es/users/jonyreyesp-5841/achievements" target="_blank">
-                    25 insignias, 2 trofeos- Microsoft Leaarn</a></i></li>    <!-- Agregar más certificaciones aquí -->
-            </ul>
-        </div>
+<footer class="footer bg-neutral text-neutral-content p-10">
+    <aside>
+      <img src="Logo Jony Reyes.png" width="50" height="50" alt="Logo Jony Reyes" class="fill-current" />
+      <p>
+        | Jony Reyes |
+        <br />
+        Providing reliable tech since 2023
+      </p>
+    </aside>
+    <nav>
+      <h6 class="footer-title">Social</h6>
+      <div class="grid grid-flow-col gap-4">
+        <a href="https://github.com/JonRe88" target="_blank" aria-label="GitHub" class="text-neutral-content">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jony-reyes-developer/" target="_blank" aria-label="LinkedIn" class="text-neutral-content">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+      </div>
+    </nav>
+  </footer>
+  
 
-        <!-- Contacto -->
-        <div id="contact">
-            <h2>Contacto.</h2>
-            <hr>
-            <p>Feel free to contact me on my social media.</p>
-            <div class="social-media">
-                <a href="https://github.com/JonRe88" target="_blank" rel="noopener" title="GitHub"><i class='fab fa-github'></i></a>
-                <a href="https://www.linkedin.com/in/jony-reyes-developer/" target="_blank"><i class='fab fa-linkedin-in'></i></a>
-                <a aria-label="Chat on WhatsApp" href="https://wa.me/525511856139"><img alt="Chat on WhatsApp" src="WhatsAppButtonGreenLarge.png"/>
-             </a>
-            </div>
-        </div>
-    </main> 
+    <script src="../path/to/flowbite/dist/flowbite.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js "></script>
+    <script>  // Mostrar el botón cuando se desplaza hacia abajo
+              window.onscroll = function() {
+                const button = document.getElementById("scrollUpBtn");
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    button.style.display = "block";
+                } else {
+                    button.style.display = "none";
+                }
+            };
+    
+            // Función para desplazarse hacia arriba
+            document.getElementById("scrollUpBtn").onclick = function() {
+                document.body.scrollTop = 0; // Para Safari
+                document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+            };
+        const texts = ["Jony Reyes", "Front End Developer", "Diseñador Frontend"];
+        let index = 0;
+        let charIndex = 0;
+        const speed = 150; // Velocidad de escritura
 
-    <footer class="footer">
-        <div class="footer-content">
-            <img src="JR (1).png" alt="JR" class="footer-image">
-            <p>© 2024 Jony Reyes. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+        function type() {
+            if (charIndex < texts[index].length) {
+                document.getElementById("typewriter").innerHTML += texts[index].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, speed);
+            } else {
+                setTimeout(deleteText, speed * 3); // Espera antes de borrar
+            }
+        }
 
-    <script src="script.js"></script>
+        function deleteText() {
+            if (charIndex > 0) {
+                document.getElementById("typewriter").innerHTML = texts[index].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(deleteText, speed);
+            } else {
+                index = (index + 1) % texts.length; // Cambia al siguiente texto
+                setTimeout(type, speed); // Comienza a escribir el siguiente texto
+            }
+        }
+
+        window.onload = type; // Inicia el efecto al cargar la página
+  
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+   <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8dfbe64e6eb5e7af","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2024.10.4","token":"1b7cbb72744b40c580f8633c6b62637e"}' crossorigin="anonymous"></script>
+
 </body>
-</html>
+    </html>
