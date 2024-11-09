@@ -1,64 +1,40 @@
-const words = ["Diseñador Web ", "Melómano ", "Autodidacta ", "Desarrollador Frontend "];
-let wordIndex = 0
-let charIndex = 0;
-let isDeleting = false;
-const typewriterElement = document.getElementById('typewriter-text');
+// Máquina de escribir en el texto "Creer es Crear"
+document.addEventListener("DOMContentLoaded", function() {
+    const text = document.querySelector(".typewriter");
+    const textContent = text.textContent;
+    let index = 0;
 
-function type() {
-    const currentWord = words[wordIndex];
-    let displayText = isDeleting 
-        ? currentWord.substring(0, charIndex--) 
-        : currentWord.substring(0, charIndex++);
+    function type() {
+        if (index < textContent.length) {
+            text.innerHTML = textContent.slice(0, index + 1) + '<span class="caret">|</span>';
+            index++;
+            setTimeout(type, 100);
+        } else {
+            text.innerHTML = textContent;
+        }
+    }
+    type();
+});
 
-    typewriterElement.textContent = displayText;
+// Menú hamburguesa para dispositivos móviles
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector("nav ul");
 
-    if (!isDeleting && charIndex === currentWord.length) {
-        isDeleting = true;
-        setTimeout(type, 1500); // Wait before deleting
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 3) % words.length;
-        setTimeout(type, 500); // Wait before typing the next word
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+    hamburger.classList.toggle("toggle");
+});
+// Mostrar el botón de scroll al subir
+window.onscroll = function() {
+    const scrollUpBtn = document.getElementById("scrollUpBtn");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollUpBtn.style.display = "block";
     } else {
-        setTimeout(type, isDeleting ? 100 : 200);
+        scrollUpBtn.style.display = "none";
     }
-}
+};
 
-type();
-
-// Carrusel
-const track = document.querySelector('.carousel-track');
-const prevButton = document.querySelector('.carousel-button.prev');
-const nextButton = document.querySelector('.carousel-button.next');
-const cards = Array.from(track.children);
-
-// Verificar la existencia de los elementos del carrusel
-if (track && prevButton && nextButton && cards.length > 0) {
-    let cardWidth = cards[0].getBoundingClientRect().width;
-    let currentIndex = 0;
-
-    function updateCarouselPosition() {
-        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    }
-
-    nextButton.addEventListener('click', () => {
-        if (currentIndex < cards.length - 2) {
-            currentIndex++;
-            updateCarouselPosition();
-        }
-    });
-
-    prevButton.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarouselPosition();
-        }
-    });
-
-    window.addEventListener('resize', () => {
-        cardWidth = cards[0].getBoundingClientRect().width;
-        updateCarouselPosition();
-    });
-} else {
-    console.error("Carousel elements are missing");
-}
+// Función para el botón de volver arriba
+document.getElementById("scrollUpBtn").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
