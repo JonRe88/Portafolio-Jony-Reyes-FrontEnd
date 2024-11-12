@@ -1,0 +1,11 @@
+{
+    "folders": [
+		{
+			"path": "."
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "JonyReyesDeveloper",
+        "liveServer.settings.port": 5501
+    }
+}

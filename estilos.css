@@ -92,22 +92,13 @@ html {
 }
 
 .icon {
-    width: 11.875rem;
-    height: 11.25rem;
+    width: 7rem;
+    height: 7rem;
     margin: 0 10px;
 }
 
 
 /* animate.css */
-
-
-/* Clase base para iniciar animaciones */
-
-.animate__animated {
-    animation-duration: 5s;
-    animation-fill-mode: both;
-    animation-play-state: play;
-}
 
 
 /* Definición de la animación pulse */
@@ -126,10 +117,6 @@ html {
 
 
 /* Clase para la animación pulse */
-
-.animate__pulse {
-    animation-name: animate__pulse;
-}
 
 #container p {
     background-clip: text;
@@ -216,4 +203,92 @@ html {
 .icon-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Animación de fundido de entrada para la página */
+
+body {
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Efecto de desplazamiento suave en la navegación */
+
+nav a {
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ff6ec7;
+    /* color de acento al pasar el ratón */
+}
+
+
+/* Animación en el encabezado principal */
+
+.hero h1,
+.hero h2 {
+    animation: slideIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Animación en los elementos de la sección de proyectos */
+
+#proyectos .flex {
+    animation: zoomIn 1s ease forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* Animación de transición en las tarjetas de habilidades */
+
+.skills-wrapper .icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.skills-wrapper .icon:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+
+/* Botón de scroll con efecto de rotación */
+
+#scrollUpBtn {
+    transition: transform 0.3s ease;
+}
+
+#scrollUpBtn:hover {
+    transform: rotate(360deg);
 }

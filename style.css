@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
+
+/* Reset básico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fafafa;
+    background-color: #000000;
+}
+
+header {
+    background-color: #ffffff73;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007BFF;
+}
+
+.hamburger {
+    display: none;
+    /* Puedes activarlo para móviles */
+}
+
+.tagline {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.name-appear {
+    color: #ffffff;
+    animation: appear 1.5s forwards;
+}
+
+.typewriter {
+    color: #ffffff;
+    border-right: 3px solid #333;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1s steps(20, end), blink-caret 0.7s step-end infinite;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: #333;
+    }
+    50% {
+        border-color: transparent;
+    }
+}
+
+footer {
+    background-color: #000000;
+    color: #666;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+footer img {
+    height: 2rem;
+}
+
+
+/* Configuración de Bento Grid */
+
+.grid-container {
+    display: grid;
+    gap: 70px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin: 0 auto;
+    max-width: 550px;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: #a3a5bf70;
+    border-radius: 18px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+
+/* Estilos de cada elemento dentro de la cuadrícula */
+
+.grid-item img {
+    width: 90%;
+    ;
+    height: auto;
+    display: block;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.grid-item h4 {
+    color: #1b9e4f64;
+    font-size: 1rem;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.grid-item p {
+    font-size: 0.9rem;
+    padding: 0 10px 10px 0px;
+    color: #05136b;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .grid-item:nth-child(2n) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+
+
+/* style.css */
+
+.bg-home {
+    background-image: url('intro-bg.jpg');
+    /* Cambia la ruta a la ubicación de tu imagen */
+    background-size: cover;
+    /* Ajusta la imagen para cubrir toda la sección */
+    background-position: center;
+    /* Centra la imagen */
+    color: white;
+    /* Cambia el color del texto si es necesario para que sea legible */
+}
+
+
+/* Estilo básico para el Slider*/
+
+#gallery {
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.gallery-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item {
+    min-width: 50%;
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    width: 50%;
+    display: block;
+}
+
+
+/* Navegación del Slider */
+
+.gallery-navigation {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -50px;
+}
+
+.nav-button {
+    background-color;
+    color: rgba(41, 158, 181, 0.307);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.nav-button:hover {
+    background-color: #55b8b8;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}

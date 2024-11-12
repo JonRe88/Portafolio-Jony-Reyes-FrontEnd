@@ -25,16 +25,3 @@ hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("toggle");
 });
 // Mostrar el botón de scroll al subir
-window.onscroll = function() {
-    const scrollUpBtn = document.getElementById("scrollUpBtn");
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollUpBtn.style.display = "block";
-    } else {
-        scrollUpBtn.style.display = "none";
-    }
-};
-
-// Función para el botón de volver arriba
-document.getElementById("scrollUpBtn").addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
