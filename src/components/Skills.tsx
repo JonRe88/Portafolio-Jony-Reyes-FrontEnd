@@ -39,9 +39,12 @@ const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="section-title">Mis Habilidades</h2>
-          <p className="section-subtitle">Estas son algunas de las tecnologías y herramientas de diseño con las que trabajo para crear experiencias digitales, funcionales e increíbles.</p>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4"> Mis Habilidades</h2>
+          <div className="w-24 h-1 bg-indigo-500 mx-auto mb-6"></div>
+          <p className="max-w-2xl mx-auto text-lg opacity-80">
+            Estas son algunas de las herramientas que ocupo. 
+          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
