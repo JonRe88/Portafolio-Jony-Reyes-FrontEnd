@@ -1,113 +1,66 @@
-import React, { useRef, useEffect } from 'react';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import TypewriterText from './TypewriterText';
+import { ArrowDown } from 'lucide-react';
 
-import { MousePointerClick } from 'lucide-react';
-
-
-gsap.registerPlugin(ScrollTrigger);
-
-const texts = ["Jony Reyes", "Front End Developer", "Diseñador Frontend"];
-
-export default function Hero() {
-  const containerRef = useRef(null);
-  const layersRef = useRef(null);
-
-  useEffect(() => {
-    if (containerRef.current && layersRef.current) {
-      const layers = [
-        { layer: "1", yPercent: 70 },
-        { layer: "2", yPercent: 55 },
-        { layer: "3", yPercent: 40 },
-        { layer: "4", yPercent: 10 },
-        { layer: "5", yPercent: 25 },
-      ];
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: layersRef.current,
-          start: "0% 0%",
-          end: "100% 0%",
-          scrub: 0
-        }
-      });
-
-      layers.forEach((layerObj, idx) => {
-        tl.to(
-          `[data-parallax-layer="${layerObj.layer}"]`,
-          {
-            yPercent: layerObj.yPercent,
-            ease: "none"
-          },
-          idx === 0 ? undefined : "<"
-        );
-      });
-
-      gsap.to('.scroll-icon', {
-        y: 10,
-        duration: 1,
-        repeat: -1,
-        yoyo: true,
-        ease: "power1.inOut"
+const Hero = () => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      window.scrollTo({
+        top: aboutSection.offsetTop - 80,
+        behavior: 'smooth'
       });
     }
-  }, []);
+  };
 
   return (
-    <div ref={containerRef} className="parallax" id="home">
-      <section className="parallax__header relative min-h-screen">
-        <div className="parallax__visuals">
-          <div ref={layersRef} data-parallax-layers className="parallax__layers">
-            
-            <img
-              src="https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717795be09b462b2e8ebf71_osmo-parallax-layer-3.webp"
-              loading="eager"
-              width="800"
-              data-parallax-layer="1"
-              alt=""
-              className="parallax__layer-img"
-            />
-            
-            
-            <img
-              src="https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717795b4d5ac529e7d3a562_osmo-parallax-layer-2.webp"
-              loading="eager"
-              width="800"
-              data-parallax-layer="2"
-              alt=""
-              className="parallax__layer-img"
-              
-            />
-            
-              <div data-parallax-layer="3" className="parallax__layer-title justify-center text-center">
-                <div className="flex flex-col gap-2">
-                 <TypewriterText 
-                texts={texts}
-                className="text-7xl md:text-7xl text-white "
-                style={{ textShadow: "1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue" }}
-                  />
-              </div>
-        
-            <img
-              src="https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717795bb5aceca85011ad83_osmo-parallax-layer-1.webp"
-              loading="eager"
-              width="800"
-              data-parallax-layer="4"
-              alt=""
-              className="parallax__layer-img"
-            />
-   
-
-            </div>
-
-            
-          <div className="parallax__fade"> </div>
+    <section 
+      id="home" 
+      className="relative h-screen flex items-center justify-center"
+    >
+      <div className="container mx-auto px-4 z-10">
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+            <span className="block transform transition-transform hover:scale-105 duration-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-blue-700">
+                Jony Reyes
+              </span>
+            </span>
+          </h1>
+          
+          <h2 className="text-xl md:text-3xl font-thin mb-8 text-indigo-500 dark:text-indigo-300 ">
+            <span className="inline-block typing-animation">Frontend Developer</span>
+          </h2>
+          
+          <p className="text-lg md:text-xl opacity-90 mb-10 leading-relaxed max-w-2xl mx-auto">
+            Crafting beautiful, interactive, and high-performance web experiences
+            with modern technologies and best practices.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <button 
+              onClick={scrollToAbout}
+              className="px-8 py-3 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+            >
+              Explore My Work
+            </button>
+            <a 
+              href="#contact" 
+              className="px-8 py-3 rounded-full border-2 border-indigo-500 hover:border-indigo-600 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg dark:bg-transparent dark:text-white"
+            >
+              Get In Touch
+            </a>
           </div>
-          </div>
-        
-      </section>
-   
-    </div>
+        </div>
+      </div>
+      
+      <button 
+        onClick={scrollToAbout} 
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce p-2"
+        aria-label="Scroll down"
+      >
+        <ArrowDown className="w-6 h-6 text-indigo-500" />
+      </button>
+    </section>
   );
-}
+};
+
+export default Hero;
