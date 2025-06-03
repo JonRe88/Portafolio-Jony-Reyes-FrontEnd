@@ -93,24 +93,6 @@ const Skills: React.FC = () => {
             ))}
           </div>
         </div>
-        
-        {/* Other Skills */}
-        <div className="mt-16">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-            Other Technologies & Tools
-          </h3>
-          
-          <div className="flex flex-wrap justify-center gap-3">
-            {otherSkills.map(skill => (
-              <span 
-                key={skill}
-                className="bg-white dark:bg-gray-700 px-4 py-2 rounded-lg shadow-sm text-gray-800 dark:text-gray-200 hover:shadow-md hover:bg-indigo-50 dark:hover:bg-gray-600 transition-all duration-300"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
